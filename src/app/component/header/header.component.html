@@ -1,0 +1,9 @@
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand">{{data}}</a>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="{{data}}" aria-label="Search" [(ngModel)]="data" name="data">
+        <a class="btn btn-outline-success" type="submit" routerLink="/search/{{data}}">Search</a>
+      </form>
+    </div>
+  </nav>

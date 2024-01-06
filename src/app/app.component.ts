@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { MainPageComponent } from './component/main-page/main-page.component';
+import { Routes } from '@angular/router';
 
 @Component({
   selector: 'app-root',
