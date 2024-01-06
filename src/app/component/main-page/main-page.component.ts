@@ -47,14 +47,22 @@ export class MainPageComponent implements OnInit {
         this.item2=[];
         if(!this.router.url.includes("/search/")){
           this.cat=this.route.snapshot.params['link'];
-          for(let item of this.items){
-            if(this.cat===item.category) this.item2.push(item)
+          if(this.cat===undefined){
+            this.item2=this.items;
+          }else{
+            for(let item of this.items){
+              if(this.cat===item.category) this.item2.push(item)
+            }
           }
           console.log(this.cat);
         }else{
           this.data=this.route.snapshot.params['data'];
-          for(let item of this.items){
-            if(item.name.includes(this.data)) this.item2.push(item)
+          if(this.data===undefined){
+            this.item2=this.items;
+          }else{
+            for(let item of this.items){
+              if(item.name.includes(this.data)) this.item2.push(item)
+            }
           }
         }
       }
